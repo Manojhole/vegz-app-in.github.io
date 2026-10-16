@@ -1431,6 +1431,37 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
+
+// ── Premium motion: reading progress, stagger, gentle card tilt ──
+const progress=document.getElementById('scroll-progress');
+let motionTick=false;
+const updateScrollEffects=()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  if(progress) progress.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+  motionTick=false;
+};
+window.addEventListener('scroll',()=>{if(!motionTick){window.requestAnimationFrame(updateScrollEffects);motionTick=true;}},{passive:true});
+updateScrollEffects();
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach((el,i)=>{
+  el.style.transitionDelay=(Math.min(i%5,4)*55)+'ms';
+});
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+  document.querySelectorAll('.contact-form,.contact-info,.faq-item,.social-ic').forEach(el=>{
+    el.addEventListener('pointermove',ev=>{
+      const r=el.getBoundingClientRect();
+      const x=(ev.clientX-r.left)/r.width-.5;
+      const y=(ev.clientY-r.top)/r.height-.5;
+      el.style.transform='perspective(900px) rotateX('+(-y*2.2)+'deg) rotateY('+(x*2.2)+'deg) translateY(-2px)';
+    });
+    el.addEventListener('pointerleave',()=>{el.style.transform='';});
+  });
+}
+document.addEventListener('keydown',ev=>{
+  if(ev.key==='Escape' && mob.classList.contains('open')){
+    mob.classList.remove('open');ham.setAttribute('aria-expanded','false');ham.focus();
+  }
+});
+
 </script>
 </body>
 </html>
