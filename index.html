@@ -999,6 +999,112 @@ section[id]{scroll-margin-top:84px;}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#e7a94b;}
 @media(max-width:760px){#hero{background-position:58% center;}}
 
+
+/* VEGZ 2026 — editorial farm-to-business redesign */
+:root{
+ --g1:#493326;--g2:#684734;--g3:#a85e3b;--g4:#c8784c;--g5:#dfa27b;
+ --gold:#e7a94b;--gold2:#f6d18a;--cream:#fbf5eb;--white:#fffdf9;
+ --ink:#2b211b;--ink2:#514034;--ink3:#78685b;--ink4:#b9a38e;
+ --sh:0 8px 28px rgba(73,51,38,.09);--sh2:0 18px 50px rgba(73,51,38,.14);
+ --r:1.1rem;--r2:1.6rem;--r3:2.1rem;
+}
+body{background:var(--white);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+.kn{font-family:"Noto Sans Kannada",system-ui,sans-serif;}
+#nav{background:rgba(255,253,249,.94);border-bottom:1px solid rgba(73,51,38,.12);box-shadow:0 5px 25px rgba(73,51,38,.04);}
+#nav.scrolled{box-shadow:0 8px 30px rgba(73,51,38,.1);}
+.logo{color:#493326}.logo em{color:#c8784c}.logo sub{color:#78685b}
+.nav-links a:hover{background:#f4e9dc;color:#8d4c30}
+.tag{background:#f4e8da;color:#8d4c30;border:1px solid #e8d4c0;letter-spacing:.015em;text-transform:none}
+.section-head{max-width:760px;margin:0 auto 48px}
+.section-head h2{color:#2b211b;letter-spacing:-.03em}
+.section-head h2 span,.about-text h2 span{color:#a85e3b}
+.section-head p{color:#78685b}
+#hero{position:relative;isolation:isolate;min-height:700px;padding:148px max(24px,calc((100vw - 1180px)/2)) 78px;background:linear-gradient(90deg,rgba(37,28,22,.93) 0%,rgba(55,38,27,.86) 48%,rgba(70,44,29,.48) 100%),url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;text-align:left;align-items:flex-start;overflow:hidden}
+#hero .hero-inner{position:relative;z-index:2;max-width:760px;margin:0}
+#hero h1{font-family:"Noto Sans Kannada",system-ui,sans-serif;font-size:clamp(2.5rem,5.3vw,4.8rem);line-height:1.22;letter-spacing:-.04em;max-width:730px;margin:24px 0 20px;text-wrap:balance}
+#hero h1 .accent{color:#f5c46c;text-shadow:none}
+#hero .subhead{font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.95;color:rgba(255,253,249,.85);max-width:650px;margin:0 0 30px}
+.hero-badge{display:inline-flex;background:rgba(247,229,198,.12);border:1px solid rgba(247,209,138,.45);color:#f8d99c;padding:9px 15px;border-radius:999px;letter-spacing:0;font-size:.84rem;backdrop-filter:blur(8px)}
+.hero-badge .dot{background:#e7a94b}
+.hero-btns{justify-content:flex-start;gap:12px;margin-bottom:30px}
+.btn{border-radius:999px;padding:14px 23px;font-weight:700;box-shadow:none;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(25,15,10,.18)}
+.btn-gold{background:#e7a94b;color:#2b211b;box-shadow:0 7px 24px rgba(231,169,75,.18)}
+.btn-gold:hover{background:#f3c36c}
+.btn-outline-white{border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.06)}
+.btn-white{background:#fffdf9;color:#684734}
+.btn-green{background:#a85e3b;color:white}
+.cities-strip{display:inline-flex;justify-content:flex-start;max-width:100%;flex-wrap:wrap;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border-radius:14px;padding:10px 15px;backdrop-filter:blur(8px)}
+#hero .veggie-float{display:none}
+#hero::before{content:"";position:absolute;z-index:1;top:auto;left:auto;right:5%;bottom:12%;width:clamp(230px,27vw,380px);height:clamp(290px,35vw,430px);border-radius:48% 48% 28px 28px;background:url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85') center/cover;opacity:.96;box-shadow:0 25px 80px rgba(0,0,0,.24);border:8px solid rgba(255,253,249,.88);transform:rotate(3deg)}
+#hero::after{content:"";position:absolute;z-index:1;top:auto;left:auto;right:3%;bottom:8%;width:150px;height:150px;border-radius:50%;border:1px solid rgba(247,209,138,.7);background:rgba(231,169,75,.15);box-shadow:inset 0 0 0 12px rgba(255,255,255,.035)}
+#trust{background:#f1e5d7;border-block:1px solid #e8d8c7;padding:22px 0}
+.trust-item{color:#514034}.trust-item p{opacity:1}
+#about{background:#fbf5eb}
+.about-grid{gap:clamp(36px,6vw,90px);align-items:center}
+.about-visual{background:linear-gradient(145deg,#493326,#986044);border-radius:28px;box-shadow:var(--sh2);overflow:hidden}
+.about-visual .big-num,.about-visual .mini-stat .n{color:#f6ce83}
+.about-text p,.feat-item p{color:#655346;line-height:1.9}
+.feat-item .check{background:#f0e1d1;color:#8e4c31}
+#vegetables{background:#fffdf9}
+.veg-grid{gap:18px}
+.veg-card{position:relative;overflow:hidden;border:1px solid #eee2d5;border-radius:20px;background:linear-gradient(180deg,#fffdf9,#fbf5eb);box-shadow:0 6px 22px rgba(73,51,38,.045);padding:25px 18px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.veg-card:hover{transform:translateY(-7px);box-shadow:0 18px 34px rgba(73,51,38,.11);border-color:#dfbda0}
+.veg-card .emoji{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 14px;border-radius:24px;background:#f3e4d2;font-size:2.5rem;transition:transform .3s ease}
+.veg-card:hover .emoji{transform:rotate(-6deg) scale(1.06)}
+.veg-card h3{color:#35271f}.veg-card .en{color:#8c7666}.veg-card .avail{background:#f1e5d7;color:#8d4c30;border-radius:999px;padding:4px 11px;font-size:.75rem}
+#problem{background:#f2e6d8}
+.prob-card,.sol-card,.serve-card,.ben-box,.contact-form,.contact-info,.faq-item{border:1px solid #eee0d1;border-radius:22px;box-shadow:0 7px 25px rgba(73,51,38,.05)}
+.prob-card,.sol-card,.serve-card{background:#fffdf9}
+.prob-num{color:#c8a88d}
+#solution{background:#fffdf9}
+#how{background:linear-gradient(135deg,#493326,#75513b)}
+#how .step-item p{color:rgba(255,253,249,.75)}
+#serve{background:#fbf5eb}
+.serve-card{padding:30px 25px;transition:transform .28s ease,box-shadow .28s ease}
+.serve-card:hover{transform:translateY(-5px);box-shadow:var(--sh2)}
+.serve-card .pill{background:#f3e4d2;color:#8d4c30}
+#benefits{background:#fffdf9}
+.ben-box{background:#fbf5eb;padding:30px}
+.ben-item .ben-ico{background:#f0e1d1;color:#8d4c30}
+#impact{background:#f2e6d8}
+#cities{background:#fbf5eb}
+.city-card,.city-item{border-color:#e8d8c7}
+#testimonials{background:#fffdf9}
+#cta{background:linear-gradient(110deg,#493326,#86583b)}
+#contact{background:#fbf5eb}
+.contact-info{background:#493326;color:#fffdf9}
+.contact-info p,.contact-info small{color:rgba(255,253,249,.72)}
+.contact-info a{color:#f5c46c}
+.contact-form{background:#fffdf9;padding:30px}
+.contact-form input,.contact-form select,.contact-form textarea{border:1px solid #e3d1bf;border-radius:12px;background:#fffdf9;color:#2b211b}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#a85e3b;box-shadow:0 0 0 3px rgba(168,94,59,.12);outline:none}
+.faq-item{background:#fffdf9;overflow:hidden}
+.faq-q{color:#35271f}
+.faq-item.open{border-color:#d9b697;box-shadow:0 12px 30px rgba(73,51,38,.08)}
+footer{background:#30231c;color:#fff3e7}
+footer a{color:rgba(255,243,231,.78)}footer a:hover{color:#f5c46c}
+#btt{background:#a85e3b;color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #e7a94b;outline-offset:3px}
+section[id]{scroll-margin-top:84px}
+@media(max-width:900px){#hero::before{right:3%;width:240px;height:290px;opacity:.38}#hero::after{right:2%;width:90px;height:90px}}
+@media(max-width:680px){
+ #hero{min-height:auto;padding:125px 22px 56px;background-position:58% center}
+ #hero::before{right:-40px;bottom:12px;width:150px;height:190px;opacity:.2;border-width:4px}
+ #hero::after{display:none}
+ #hero h1{font-size:clamp(2.25rem,10vw,3.4rem);max-width:100%}
+ #hero .subhead{font-size:1rem;max-width:100%}
+ .hero-btns{align-items:stretch;flex-direction:column;max-width:360px}
+ .hero-btns .btn{justify-content:center}
+ .cities-strip{font-size:.82rem;gap:6px;padding:10px}
+ .trust-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+ .veg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .veg-card{padding:18px 10px}
+ .veg-card .emoji{width:62px;height:62px;font-size:2rem;border-radius:19px}
+ .contact-form{padding:22px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}}
+
 </style>
 </head>
 <body>\n<div id="scroll-progress" aria-hidden="true"></div>
