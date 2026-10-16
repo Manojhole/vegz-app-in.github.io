@@ -11,7 +11,7 @@
 <meta name="author" content="VEGZ – vegz.online"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"/>
 <link rel="canonical" href="https://vegz.online/"/>
-<meta name="theme-color" content="#0a4f28"/>\n<meta name="color-scheme" content="light"/>\n<meta name="format-detection" content="telephone=no"/>
+<meta name="theme-color" content="#493326"/>\n<meta name="color-scheme" content="light"/>\n<meta name="format-detection" content="telephone=no"/>
 <meta name="geo.region" content="IN-KA"/>
 <meta name="geo.placename" content="Hubli, Dharwad, Gadag, Mundargi, Karnataka, India"/>
 <meta name="geo.position" content="15.3647;75.1240"/>
@@ -965,6 +965,39 @@ section[id]{scroll-margin-top:84px;}
  .trust-item{gap:7px;}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}}
+
+
+/* Warm harvest palette — replacing the dominant green look */
+:root{
+ --g1:#493326;--g2:#684734;--g3:#a85e3b;--g4:#c8784c;--g5:#dfa27b;
+ --gold:#e7a94b;--gold2:#f6d18a;--cream:#fbf5eb;--white:#fffdf9;
+ --ink:#2b211b;--ink2:#514034;--ink3:#78685b;--ink4:#b9a38e;
+ --sh:0 8px 28px rgba(73,51,38,.09);--sh2:0 18px 50px rgba(73,51,38,.14);
+}
+#nav{background:rgba(255,253,249,.95);border-bottom-color:rgba(73,51,38,.1);}
+.logo,.hamburger span{color:var(--g1);}
+#hero{background:linear-gradient(105deg,rgba(39,28,22,.91),rgba(94,54,34,.72)),url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;}
+#hero h1 .accent{color:#f1bb61;text-shadow:0 3px 28px rgba(241,187,97,.18);}
+.hero-badge{background:rgba(231,169,75,.15);border-color:rgba(231,169,75,.55);color:#ffdb9b;}
+#hero::after{background:rgba(231,169,75,.1);}
+#trust{background:#f0e5d5;border-bottom:1px solid #e5d4c0;}
+.trust-item{color:#514034;}
+#about{background:#fbf5eb;}
+.about-visual{background:linear-gradient(145deg,#503528,#986044);}
+.about-visual .big-num,.about-visual .mini-stat .n{color:#f6ce83;}
+.tag{background:rgba(168,94,59,.09);color:#8e4c31;border-color:rgba(168,94,59,.2);}
+.btn-green{background:#a85e3b;color:#fff;box-shadow:0 4px 18px rgba(168,94,59,.2);}
+.btn-green:hover{background:#8d4a30;}
+.btn-gold{background:#e7a94b;color:#2b211b;box-shadow:0 4px 18px rgba(231,169,75,.24);}
+.btn-gold:hover{background:#f2c16d;}
+.btn-white{color:#684734;}
+.btn-outline-white{border-color:rgba(255,255,255,.68);}
+.section-head h2 span,.about-text h2 span{color:#a85e3b;}
+.veg-card,.prob-card,.sol-card,.serve-card,.ben-box,.contact-form,.contact-info,.faq-item{box-shadow:0 5px 24px rgba(73,51,38,.065);}
+.feat-item .check{background:#f0e1d1;color:#8e4c31;}
+#btt{background:#a85e3b;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#e7a94b;}
+@media(max-width:760px){#hero{background-position:58% center;}}
 
 </style>
 </head>
