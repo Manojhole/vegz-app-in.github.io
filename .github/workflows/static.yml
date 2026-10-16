@@ -41,10 +41,12 @@ jobs:
           import xml.etree.ElementTree as ET
 
           html = open("index.html", encoding="utf-8").read()
-          match = re.search(r'<script type="application/ld\\+json">(.*?)</script>', html, re.S)
-          if not match:
+          marker = '<script type="application/ld+json">'
+          start = html.find(marker)
+          end = html.find('</script>', start)
+          if start < 0 or end < 0:
               raise SystemExit("::error::JSON-LD structured data is missing.")
-          json.loads(match.group(1))
+          json.loads(html[start + len(marker):end])
           sitemap = ET.parse("sitemap.xml").getroot()
           ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
           urls = [el.text for el in sitemap.findall("sm:url/sm:loc", ns)]
