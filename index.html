@@ -1105,6 +1105,30 @@ section[id]{scroll-margin-top:84px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}}
 
+
+/* Human stories: farmer dawn + hotel kitchen */
+.story-section{padding:100px 0;background:#f4eadc;position:relative;overflow:hidden}
+.story-section:before{content:"";position:absolute;top:-160px;right:-140px;width:340px;height:340px;border:1px solid rgba(168,94,59,.15);border-radius:50%;box-shadow:0 0 0 35px rgba(168,94,59,.025),0 0 0 70px rgba(168,94,59,.02);pointer-events:none}
+.story-section .container{position:relative;z-index:1}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.story-card{background:#fffdf9;border:1px solid #ead9c7;border-radius:26px;overflow:hidden;box-shadow:0 12px 36px rgba(73,51,38,.06);transition:transform .3s ease,box-shadow .3s ease}
+.story-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(73,51,38,.12)}
+.story-photo{height:260px;position:relative;background-size:cover;background-position:center}
+.farmer-photo{background-image:linear-gradient(0deg,rgba(38,27,20,.38),transparent 65%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1100&q=85')}
+.kitchen-photo{background-image:linear-gradient(0deg,rgba(38,27,20,.38),transparent 65%),url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1100&q=85')}
+.photo-label{position:absolute;left:20px;bottom:18px;color:white;background:rgba(43,33,27,.65);border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:999px;font-size:.8rem;backdrop-filter:blur(8px)}
+.story-copy{padding:30px 30px 32px}
+.story-kicker{font-size:.82rem;font-weight:800;color:#a85e3b;letter-spacing:.02em}
+.story-copy h3{font-size:clamp(1.35rem,2vw,1.8rem);line-height:1.5;margin:12px 0;color:#35271f}
+.story-copy p{color:#655346;line-height:1.95;font-size:.98rem}
+.story-emphasis{margin-top:20px;padding:15px 18px;border-left:3px solid #d49b52;background:#f8efe4;border-radius:0 12px 12px 0;font-weight:650;color:#684734!important}
+.story-bridge{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;margin-top:28px;padding:28px 30px;background:#493326;color:#fff8ef;border-radius:24px;box-shadow:0 15px 36px rgba(73,51,38,.14)}
+.bridge-mark{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:#e7a94b;color:#493326;font-size:2rem}
+.story-bridge h3{font-family:"Noto Sans Kannada",system-ui,sans-serif;font-size:1.25rem;margin-bottom:8px;color:#fff8ef}
+.story-bridge p{font-family:"Noto Sans Kannada",system-ui,sans-serif;line-height:1.85;color:rgba(255,248,239,.78);max-width:760px}
+.story-bridge .btn{white-space:nowrap}
+@media(max-width:760px){.story-section{padding:70px 0}.story-grid{grid-template-columns:1fr;gap:18px}.story-photo{height:220px}.story-copy{padding:24px 22px}.story-bridge{grid-template-columns:auto 1fr;gap:16px;padding:22px}.story-bridge .btn{grid-column:1/-1;justify-content:center}.bridge-mark{width:48px;height:48px}}
+
 </style>
 </head>
 <body>\n<div id="scroll-progress" aria-hidden="true"></div>
@@ -1116,6 +1140,7 @@ section[id]{scroll-margin-top:84px}
       <a href="/" class="logo" aria-label="VEGZ Home">VEG<em>Z</em><sub>vegz.online</sub></a>
       <ul class="nav-links" role="menubar">
         <li><a href="#about" role="menuitem">ಬಗ್ಗೆ</a></li>
+        <li><a href="#our-story" role="menuitem">ನಮ್ಮ ಕಥೆ</a></li>
         <li><a href="#vegetables" role="menuitem">ತರಕಾರಿಗಳು</a></li>
         <li><a href="#how" role="menuitem">ಹೇಗೆ?</a></li>
         <li><a href="#serve" role="menuitem">ಸೇವೆ</a></li>
@@ -1199,6 +1224,40 @@ section[id]{scroll-margin-top:84px}
 </section>
 
 <!-- ══ VEGETABLES ══ -->
+<section id="our-story" aria-labelledby="story-h2" class="story-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="tag">❤️ ಮಣ್ಣಿನಿಂದ ಮನದವರೆಗೆ</span>
+      <h2 id="story-h2">ಒಂದು ತರಕಾರಿಯ ಹಿಂದೆ <span>ಎರಡು ಬೆಳಗಿನ ಕಥೆಗಳು</span></h2>
+      <p class="kn">ಒಂದೇ ಬೆಳಗಿನ ಜಾವ. ಒಂದು ಕಡೆ ಬೆಳೆದ ಬೆಳೆಯನ್ನು ಮಾರಲು ಹೊರಡುವ ರೈತರು; ಇನ್ನೊಂದು ಕಡೆ ದಿನದ ಮೊದಲ ಊಟಕ್ಕೆ ಸಿದ್ಧವಾಗುವ ಅಡುಗೆಮನೆಗಳು.</p>
+    </div>
+    <div class="story-grid">
+      <article class="story-card farmer-story reveal">
+        <div class="story-photo farmer-photo" role="img" aria-label="ಬೆಳಗಿನ ಹೊತ್ತಿನಲ್ಲಿ ತರಕಾರಿ ಬೆಳೆ ಮತ್ತು ಹೊಲದ ದೃಶ್ಯ"><span class="photo-label kn">01 · ಹೊಲದ ಬೆಳಗು</span></div>
+        <div class="story-copy">
+          <span class="story-kicker kn">ರೈತರ ಕಥೆ</span>
+          <h3 class="kn">ಸೂರ್ಯೋದಯಕ್ಕೂ ಮುಂಚೆ ಶುರುವಾಗುವ ಶ್ರಮ.</h3>
+          <p class="kn">ಬಿತ್ತನೆ, ನೀರು, ಕಳೆ ತೆಗೆಯುವುದು, ಕೊಯ್ಲು—ಪ್ರತಿ ಬೆಳೆಯ ಹಿಂದೆ ಸಮಯವೂ ಶ್ರಮವೂ ಇರುತ್ತವೆ. ಕೊಯ್ಲಾದ ತರಕಾರಿಯನ್ನು ಎಲ್ಲಿ ಮಾರಬೇಕು, ಯಾವ ಬೆಲೆ ಸಿಗಬಹುದು ಎಂಬ ಪ್ರಶ್ನೆಯೂ ರೈತನ ದಿನದ ಭಾಗವಾಗಬಹುದು.</p>
+          <p class="story-emphasis kn">“ಬೆಳೆ ಬೆಳೆಸುವುದು ಒಂದು ಶ್ರಮ. ಅದಕ್ಕೆ ಸರಿಯಾದ ಖರೀದಿದಾರರನ್ನು ಹುಡುಕುವುದು ಮತ್ತೊಂದು.”</p>
+        </div>
+      </article>
+      <article class="story-card kitchen-story reveal">
+        <div class="story-photo kitchen-photo" role="img" aria-label="ಹೋಟೆಲ್ ಅಡುಗೆಮನೆಯಲ್ಲಿ ತರಕಾರிகளைத் தயாரಿಸುವ காட்சி"><span class="photo-label kn">02 · ಅಡುಗೆಮನೆಯ ಬೆಳಗು</span></div>
+        <div class="story-copy">
+          <span class="story-kicker kn">ಹೋಟೆಲ್ ಮತ್ತು ಆಹಾರ ವ್ಯವಹಾರಗಳ ಕಥೆ</span>
+          <h3 class="kn">ಮೊದಲ ಗ್ರಾಹಕರಿಗಿಂತ ಮುಂಚೆ ಸಿದ್ಧವಾಗುವ ಅಡುಗೆಮನೆ.</h3>
+          <p class="kn">ಹೋಟೆಲ್, ಟಿಫಿನ್ ಸೆಂಟರ್ ಮತ್ತು ರೆಸ್ಟೋರೆಂಟ್‌ಗಳಿಗೆ ದಿನದ ಮೆನು ರೂಪಿಸಲು ತರಕಾರಿ ಬೇಕು. ಯಾವುದು ಲಭ್ಯ, ಎಷ್ಟು ಬೇಕು, ಗುಣಮಟ್ಟ ಹೇಗಿದೆ, ಯಾವಾಗ ತಲುಪುತ್ತದೆ—ಈ ಮಾಹಿತಿ ಸಮಯಕ್ಕೆ ಸಿಕ್ಕರೆ ಯೋಜನೆ ಸುಲಭವಾಗುತ್ತದೆ.</p>
+          <p class="story-emphasis kn">“ಒಳ್ಳೆಯ ಊಟದ ಆರಂಭ, ಸರಿಯಾದ ಪದಾರ್ಥಗಳನ್ನು ಸಮಯಕ್ಕೆ ಸಿದ್ಧಪಡಿಸುವುದರಿಂದ.”</p>
+        </div>
+      </article>
+    </div>
+    <div class="story-bridge reveal">
+      <div class="bridge-mark" aria-hidden="true">↔</div>
+      <div><h3 class="kn">ಇವರಿಬ್ಬರ ನಡುವೆ ಒಂದು ನಂಬಿಕೆಯ ಸಂಪರ್ಕ.</h3><p class="kn">VEGZ ಈ ಸಂಪರ್ಕವನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ—ರೈತರು ತಮ್ಮ ಉತ್ಪನ್ನದ ವಿವರ ಹಂಚಿಕೊಳ್ಳಲು, ಖರೀದಿದಾರರು ತಮ್ಮ ಅಗತ್ಯ ತಿಳಿಸಲು, ಮತ್ತು ಬೆಲೆ, ಗುಣಮಟ್ಟ, ಪಾವತಿ ಹಾಗೂ ವಿತರಣೆಯ ಬಗ್ಗೆ ಸ್ಪಷ್ಟವಾಗಿ ಮಾತುಕತೆ ನಡೆಸಲು.</p></div>
+      <a href="#contact" class="btn btn-green kn">ನಿಮ್ಮ ಕಥೆ ಹಂಚಿಕೊಳ್ಳಿ <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
 <section id="vegetables" aria-labelledby="veg-h2">
   <div class="container">
     <div class="section-head reveal">
