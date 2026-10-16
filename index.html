@@ -197,7 +197,7 @@ ul{list-style:none;}
 ════════════════════════════════════════ */
 #hero{
   min-height:100vh;
-  background:linear-gradient(150deg,#051f0f 0%,var(--g1) 40%,var(--g2) 75%,#0d7a3e 100%);
+  background:linear-gradient(150deg,#051f0f 0%,var(--g1) ನ್ಯಾಯ,var(--g2) 75%,#0d7a3e 100%);
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   padding:120px 24px 80px;
@@ -927,7 +927,46 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
  .container{padding-inline:18px}
  .section-head{margin-bottom:34px}
 }
-\n</style>
+\n
+/* Editorial refresh: calmer, more credible, farm-led presentation */
+:root{--g1:#174b32;--g2:#246443;--g3:#39845a;--g4:#78a96b;--g5:#a9c99a;--gold:#e6b95b;--gold2:#f2d58e;--cream:#f7f6ef;--ink:#17271d;--ink2:#304b3a;--ink3:#64776a;--sh:0 8px 28px rgba(23,75,50,.08);--sh2:0 18px 50px rgba(23,75,50,.12);}
+#hero{min-height:760px;background:linear-gradient(115deg,rgba(13,48,31,.94),rgba(25,85,54,.82)),url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;text-align:left;align-items:flex-start;padding:150px max(24px,calc((100vw - 1180px)/2)) 90px;}
+.hero-inner{max-width:790px;margin:0;}
+#hero h1{font-size:clamp(2.6rem,6vw,5.2rem);letter-spacing:-.035em;line-height:1.15;max-width:760px;}
+#hero .subhead{margin:0 0 32px;max-width:620px;font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.88);}
+.hero-btns{justify-content:flex-start;margin-bottom:38px;}
+.cities-strip{border-radius:16px;justify-content:flex-start;}
+#hero::before{width:760px;height:760px;top:-340px;right:-150px;background:rgba(255,255,255,.025);}
+#hero::after{width:460px;height:460px;bottom:-260px;left:auto;right:4%;background:rgba(230,185,91,.08);}
+.veggie-float{opacity:.07;}
+.hero-badge{letter-spacing:0;text-transform:none;}
+#trust{background:#f0f2e9;border-bottom:1px solid #e4e8dd;padding:22px 0;}
+.trust-item{color:var(--ink2);}
+.trust-item p{opacity:1;}
+.trust-item .ico{filter:saturate(.75);}
+#about{background:#f8f8f3;}
+.about-visual{background:linear-gradient(145deg,#1a5136,#2f704b);box-shadow:var(--sh2);}
+.section-head h2,.about-text h2{letter-spacing:-.025em;}
+.veg-card,.prob-card,.sol-card,.serve-card,.ben-box,.contact-form,.contact-info,.faq-item{border-radius:18px;box-shadow:0 5px 24px rgba(25,55,35,.055);}
+.btn{letter-spacing:0;box-shadow:none;}
+.btn-gold{background:#e6bd62;}
+.btn-green{background:#28744b;}
+.btn-white{color:#1b5537;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #e6bd62;outline-offset:3px;}
+section[id]{scroll-margin-top:84px;}
+@media(max-width:760px){
+ #hero{min-height:auto;padding:126px 22px 70px;background-position:58% center;}
+ #hero h1{font-size:clamp(2.25rem,10vw,3.5rem);}
+ #hero .subhead{text-align:left;}
+ .hero-btns{align-items:stretch;flex-direction:column;max-width:360px;}
+ .hero-btns .btn{justify-content:center;}
+ .cities-strip{border-radius:16px;gap:8px;padding:10px 14px;}
+ .trust-inner{justify-content:flex-start;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+ .trust-item{gap:7px;}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}}
+
+</style>
 </head>
 <body>\n<div id="scroll-progress" aria-hidden="true"></div>
 
@@ -969,7 +1008,7 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
   <div class="hero-inner">
     <div class="hero-badge kn">
       <span class="dot"></span>
-      ಕರ್ನಾಟಕದ #1 ತರಕಾರಿ ಸರಬರಾಜು ವೇದಿಕೆ
+      ಉತ್ತರ ಕರ್ನಾಟಕದ ರೈತರು ಮತ್ತು ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವ ಪ್ರಯತ್ನ
     </div>
     <h1>
       ತಾಜಾ ತರಕಾರಿ,<br/>
@@ -1005,9 +1044,9 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
       <div class="trust-item"><span class="ico">✅</span><p class="kn">ಮಧ್ಯವರ್ತಿ ಇಲ್ಲ</p></div>
       <div class="trust-item"><span class="ico">💰</span><p class="kn">ನ್ಯಾಯಯುತ ಬೆಲೆ</p></div>
       <div class="trust-item"><span class="ico">🚚</span><p class="kn">ತ್ವರಿತ ಡೆಲಿವರಿ</p></div>
-      <div class="trust-item"><span class="ico">🌿</span><p class="kn">100% ತಾಜಾ</p></div>
+      <div class="trust-item"><span class="ico">🌿</span><p class="kn">ತಾಜಾತನಕ್ಕೆ ಆದ್ಯತೆ</p></div>
       <div class="trust-item"><span class="ico">📦</span><p class="kn">5kg & 10kg ಪ್ಯಾಕ್</p></div>
-      <div class="trust-item"><span class="ico">📞</span><p class="kn">24/7 ಸಹಾಯ</p></div>
+      <div class="trust-item"><span class="ico">📞</span><p class="kn">ಸಂಪರ್ಕಿಸಿ ಮಾಹಿತಿ ಪಡೆಯಿರಿ</p></div>
     </div>
   </div>
 </section>
@@ -1017,25 +1056,25 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
   <div class="container">
     <div class="about-grid">
       <div class="about-visual reveal-left">
-        <div class="big-num">500+</div>
-        <div class="big-label kn">ರೈತ ಪಾಲುದಾರರು</div>
+        <div class="big-num">ನೇರ</div>
+        <div class="big-label kn">ರೈತ ಸಂಪರ್ಕ</div>
         <div class="stat-row">
-          <div class="mini-stat"><div class="n">50T+</div><div class="l kn">ತರಕಾರಿ ನಿರ್ವಹಣೆ</div></div>
-          <div class="mini-stat"><div class="n">200+</div><div class="l kn">ಖರೀದಿದಾರರು</div></div>
-          <div class="mini-stat"><div class="n">8+</div><div class="l kn">ಜಿಲ್ಲೆಗಳಲ್ಲಿ</div></div>
-          <div class="mini-stat"><div class="n">40%</div><div class="l kn">ಹೆಚ್ಚು ಆದಾಯ</div></div>
+          <div class="mini-stat"><div class="n">ಸ್ಥಳೀಯ</div><div class="l kn">ಮಾರುಕಟ್ಟೆ ಸಂಪರ್ಕ</div></div>
+          <div class="mini-stat"><div class="n">ಸಹಜ</div><div class="l kn">ವ್ಯಾಪಾರ ಸಂಪರ್ಕ</div></div>
+          <div class="mini-stat"><div class="n">ಉತ್ತರ</div><div class="l kn">ಕರ್ನಾಟಕದ ಭಾಗ</div></div>
+          <div class="mini-stat"><div class="n">40%</div><div class="l kn">ಬೆಲೆ ಮಾತುಕತೆ</div></div>
         </div>
       </div>
       <div class="about-text reveal-right">
         <span class="tag">🌱 ನಮ್ಮ ಬಗ್ಗೆ</span>
-        <h2 id="about-h2">VEGZ ಎಂದರೆ <span>ರೈತರ ಶಕ್ತಿ</span></h2>
-        <p class="kn">VEGZ ಕರ್ನಾಟಕದ ರೈತರಿಗೆ ನೇರ ಮಾರುಕಟ್ಟೆ ನೀಡುವ ತರಕಾರಿ ಸರಬರಾಜು ವೇದಿಕೆ. ನಾವು ರೈತರ ಹೊಲಕ್ಕೇ ಬಂದು ತರಕಾರಿ ಖರೀದಿಸುತ್ತೇವೆ ಮತ್ತು ಹೋಟೆಲ್, ಅಂಗಡಿ, ಕ್ಯಾಟರಿಂಗ್‌ಗೆ ತಾಜಾ ತರಕಾರಿ ವಿತರಿಸುತ್ತೇವೆ.</p>
-        <p class="kn">ನಮ್ಮ ಧ್ಯೇಯ: ರೈತರಿಗೆ ನ್ಯಾಯಯುತ ಬೆಲೆ, ಖರೀದಿದಾರರಿಗೆ ತಾಜಾ ತರಕಾರಿ – ಮಧ್ಯವರ್ತಿ ಇಲ್ಲದ ಪಾರದರ್ಶಕ ವ್ಯವಸ್ಥೆ.</p>
+        <h2 id="about-h2">ಸ್ಥಳೀಯ ಬೆಳೆಗಳಿಗೆ <span>ಹೊಸ ಸಂಪರ್ಕ</span></h2>
+        <p class="kn">VEGZ ಒಂದು ಸ್ಥಳೀಯ ಕೃಷಿ-ವ್ಯಾಪಾರ ಸಂಪರ್ಕದ ಕಲ್ಪನೆ. ರೈತರು ತಮ್ಮ ಉತ್ಪನ್ನಗಳ ವಿವರ ಹಂಚಿಕೊಳ್ಳಲು ಮತ್ತು ಹೋಟೆಲ್‌ಗಳು, ಅಂಗಡಿಗಳು ಹಾಗೂ ಆಹಾರ ವ್ಯವಹಾರಗಳು ತಮ್ಮ ತರಕಾರಿ ಅಗತ್ಯಗಳನ್ನು ತಿಳಿಸಲು ಇದು ಸರಳ ದಾರಿ ಒದಗಿಸುತ್ತದೆ.</p>
+        <p class="kn">ನಮ್ಮ ಉದ್ದೇಶ ಸರಳ: ಸ್ಥಳೀಯ ಬೆಳೆಗಳಿಗೆ ಸೂಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವುದು ಮತ್ತು ಎರಡೂ ಬದಿಗಳ ನಿರೀಕ್ಷೆಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಚರ್ಚಿಸಲು ಸಹಾಯ ಮಾಡುವುದು.</p>
         <div class="feat-list">
-          <div class="feat-item"><div class="check">✓</div><p class="kn">ಹೊಲಕ್ಕೇ ಬಂದು ಗಾತ್ರ ಮತ್ತು ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ</p></div>
-          <div class="feat-item"><div class="check">✓</div><p class="kn">ತಕ್ಷಣ ನ್ಯಾಯಯುತ ಹಣ ಪಾವತಿ – ಯಾವ ಕಡಿತವೂ ಇಲ್ಲ</p></div>
-          <div class="feat-item"><div class="check">✓</div><p class="kn">5kg & 10kg VEGZ ಬ್ರ್ಯಾಂಡ್ ಲೇಬಲ್‌ನಲ್ಲಿ ಪ್ಯಾಕಿಂಗ್</p></div>
-          <div class="feat-item"><div class="check">✓</div><p class="kn">ಹೆಚ್ಚುವರಿ ತರಕಾರಿ ವ್ಯರ್ಥ ಆಗದಂತೆ ನಿರ್ವಹಣೆ</p></div>
+          <div class="feat-item"><div class="check">✓</div><p class="kn">ಉತ್ಪನ್ನ ಮತ್ತು ಪ್ರಮಾಣದ ವಿವರಗಳನ್ನು ಚರ್ಚಿಸಿ</p></div>
+          <div class="feat-item"><div class="check">✓</div><p class="kn">ಬೆಲೆ ಮತ್ತು ಪಾವತಿ ಷರತ್ತುಗಳನ್ನು ಮುಂಚಿತವಾಗಿ ಒಪ್ಪಿಕೊಳ್ಳಿ</p></div>
+          <div class="feat-item"><div class="check">✓</div><p class="kn">ಅಗತ್ಯಕ್ಕೆ ತಕ್ಕ ಪ್ಯಾಕಿಂಗ್ ಆಯ್ಕೆಗಳನ್ನು ಚರ್ಚಿಸಿ</p></div>
+          <div class="feat-item"><div class="check">✓</div><p class="kn">ಬೇಡಿಕೆ ಮತ್ತು ಲಭ್ಯತೆಯ ಮಾಹಿತಿ ಹಂಚಿಕೊಳ್ಳಿ</p></div>
         </div>
       </div>
     </div>
@@ -1091,15 +1130,15 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
     <div class="section-head reveal">
       <span class="tag">✅ ಪರಿಹಾರ</span>
       <h2 id="sol-h2">VEGZ ನೀಡುವ <span>ಪರಿಹಾರ</span></h2>
-      <p class="kn">ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಸಮರ್ಥ ವ್ಯವಸ್ಥೆ ಮೂಲಕ ಎಲ್ಲ ಸಮಸ್ಯೆ ಬಗೆಹರಿಸುತ್ತೇವೆ</p>
+      <p class="kn">ವ್ಯವಹಾರ ಆರಂಭಿಸುವ ಮೊದಲು ಅಗತ್ಯಗಳು ಮತ್ತು ಲಭ್ಯತೆಯನ್ನು ಸ್ಪಷ್ಟಪಡಿಸೋಣ</p>
     </div>
     <div class="sol-grid">
-      <div class="sol-card reveal"><div class="ico">🌾</div><h3 class="kn">ರೈತರಿಂದ ನೇರ ಖರೀದಿ</h3><p class="kn">ನಾವು ರೈತರ ಹೊಲಕ್ಕೇ ಬರುತ್ತೇವೆ. ಯಾವ ಮಧ್ಯವರ್ತಿ ಇಲ್ಲ.</p></div>
-      <div class="sol-card reveal"><div class="ico">⚖️</div><h3 class="kn">ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ</h3><p class="kn">ಗಾತ್ರ ಮತ್ತು ಗುಣಮಟ್ಟ ನೋಡಿ ನ್ಯಾಯಯುತ ಬೆಲೆ ನಿಗದಿ.</p></div>
-      <div class="sol-card reveal"><div class="ico">📦</div><h3 class="kn">VEGZ ಬ್ರ್ಯಾಂಡ್ ಪ್ಯಾಕಿಂಗ್</h3><p class="kn">5kg ಮತ್ತು 10kg ಪ್ಯಾಕ್‌ಗಳಲ್ಲಿ ಪ್ರೊಫೆಷನಲ್ ಲೇಬಲ್ ಮಾಡುತ್ತೇವೆ.</p></div>
-      <div class="sol-card reveal"><div class="ico">🚚</div><h3 class="kn">ತ್ವರಿತ ವಿತರಣೆ</h3><p class="kn">ಹೋಟೆಲ್, ಕ್ಯಾಟರಿಂಗ್, ಅಂಗಡಿಗೆ ಸಮಯದಲ್ಲಿ ತರಕಾರಿ.</p></div>
-      <div class="sol-card reveal"><div class="ico">💰</div><h3 class="kn">ತಕ್ಷಣ ಹಣ ಪಾವತಿ</h3><p class="kn">ಖರೀದಿ ಮಾಡಿದ ದಿನವೇ ರೈತರ ಖಾತೆಗೆ ಹಣ.</p></div>
-      <div class="sol-card reveal"><div class="ico">♻️</div><h3 class="kn">ಹೆಚ್ಚುವರಿ ನಿರ್ವಹಣೆ</h3><p class="kn">ಉಳಿದ ತರಕಾರಿ ವ್ಯರ್ಥ ಆಗದಂತೆ ಸರಿಯಾಗಿ ಮಾರಾಟ.</p></div>
+      <div class="sol-card reveal"><div class="ico">🌾</div><h3 class="kn">ರೈತರಿಂದ ನೇರ ಖರೀದಿ</h3><p class="kn">ಸ್ಥಳ ಮತ್ತು ಪ್ರಮಾಣದ ಆಧಾರದಲ್ಲಿ ಸಂಗ್ರಹದ ವ್ಯವಸ್ಥೆಯನ್ನು ಚರ್ಚಿಸಬಹುದು.</p></div>
+      <div class="sol-card reveal"><div class="ico">⚖️</div><h3 class="kn">ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ</h3><p class="kn">ಗುಣಮಟ್ಟ, ಪ್ರಮಾಣ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ದರದ ಆಧಾರದಲ್ಲಿ ಬೆಲೆ ಒಪ್ಪಂದ ಮಾಡಿಕೊಳ್ಳಿ.</p></div>
+      <div class="sol-card reveal"><div class="ico">📦</div><h3 class="kn">ಪ್ಯಾಕಿಂಗ್ ಅಗತ್ಯ ಚರ್ಚಿಸಿ</h3><p class="kn">ಪ್ಯಾಕಿಂಗ್ ಆಯ್ಕೆಗಳು ಉತ್ಪನ್ನ ಮತ್ತು ಆರ್ಡರ್‌ಗೆ ಅನುಗುಣವಾಗಿ ಚರ್ಚಿಸಬಹುದು.</p></div>
+      <div class="sol-card reveal"><div class="ico">🚚</div><h3 class="kn">ತ್ವರಿತ ವಿತರಣೆ</h3><p class="kn">ವಿತರಣೆಯ ಸ್ಥಳ ಮತ್ತು ಸಮಯವನ್ನು ಆರ್ಡರ್ ಮಾಡುವಾಗ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.</p></div>
+      <div class="sol-card reveal"><div class="ico">💰</div><h3 class="kn">ತಕ್ಷಣ ಹಣ ಪಾವತಿ</h3><p class="kn">ಪಾವತಿ ವಿಧಾನ ಮತ್ತು ಸಮಯವನ್ನು ಮುಂಚಿತವಾಗಿ ಒಪ್ಪಿಕೊಳ್ಳಿ.</p></div>
+      <div class="sol-card reveal"><div class="ico">♻️</div><h3 class="kn">ಹೆಚ್ಚುವರಿ ನಿರ್ವಹಣೆ</h3><p class="kn">ಬೇಡಿಕೆಯ ಮಾಹಿತಿ ಹಂಚಿಕೊಳ್ಳುವುದು ಉತ್ತಮ ಯೋಜನೆಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.</p></div>
     </div>
   </div>
 </section>
@@ -1113,10 +1152,10 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
       <p>ನಾಲ್ಕು ಸರಳ ಹಂತಗಳಲ್ಲಿ ರೈತರಿಂದ ಖರೀದಿದಾರರಿಗೆ</p>
     </div>
     <div class="steps-row reveal">
-      <div class="step-item"><div class="step-num"><div class="num">01</div><div class="sico">📞</div></div><h3 class="kn">ರೈತರು ಕರೆ ಮಾಡುತ್ತಾರೆ</h3><p class="kn">ರೈತರು VEGZ ಗೆ ಸಂಪರ್ಕಿಸಿ ತರಕಾರಿ ಲಭ್ಯತೆ ತಿಳಿಸುತ್ತಾರೆ</p></div>
-      <div class="step-item"><div class="step-num"><div class="num">02</div><div class="sico">🚗</div></div><h3 class="kn">ನಾವು ಹೊಲಕ್ಕೆ ಬರುತ್ತೇವೆ</h3><p class="kn">ನಮ್ಮ ತಂಡ ರೈತರ ಹೊಲಕ್ಕೆ ಬಂದು ಗಾತ್ರ ಮತ್ತು ಗುಣಮಟ್ಟ ಪರೀಕ್ಷಿಸುತ್ತದೆ</p></div>
-      <div class="step-item"><div class="step-num"><div class="num">03</div><div class="sico">📦</div></div><h3 class="kn">ಸಂಗ್ರಹ ಮತ್ತು ವಿತರಣೆ</h3><p class="kn">VEGZ ಬ್ರ್ಯಾಂಡ್‌ನಲ್ಲಿ ಪ್ಯಾಕ್ ಮಾಡಿ ಹೋಟೆಲ್ ಮತ್ತು ಅಂಗಡಿಗೆ ತಲುಪಿಸುತ್ತೇವೆ</p></div>
-      <div class="step-item"><div class="step-num"><div class="num">04</div><div class="sico">💰</div></div><h3 class="kn">ರೈತರಿಗೆ ತಕ್ಷಣ ಹಣ</h3><p class="kn">ಅದೇ ದಿನ ನ್ಯಾಯಯುತ ಬೆಲೆ ನೇರ ರೈತರ ಖಾತೆಗೆ ಪಾವತಿ</p></div>
+      <div class="step-item"><div class="step-num"><div class="num">01</div><div class="sico">📞</div></div><h3 class="kn">ರೈತರು ಉತ್ಪನ್ನದ ವಿವರ ಹಂಚಿಕೊಳ್ಳುತ್ತಾರೆ</h3><p class="kn">ರೈತರು VEGZ ಗೆ ಸಂಪರ್ಕಿಸಿ ತರಕಾರಿ ಲಭ್ಯತೆ ತಿಳಿಸುತ್ತಾರೆ</p></div>
+      <div class="step-item"><div class="step-num"><div class="num">02</div><div class="sico">🚗</div></div><h3 class="kn">ನಾವು ಹೊಲಕ್ಕೆ ಬರುತ್ತೇವೆ</h3><p class="kn">ಮುಂದಿನ ಹಂತವಾಗಿ ಪ್ರಮಾಣ, ಗುಣಮಟ್ಟ ಮತ್ತು ಸಂಗ್ರಹದ ವಿವರಗಳನ್ನು ಚರ್ಚಿಸಿ</p></div>
+      <div class="step-item"><div class="step-num"><div class="num">03</div><div class="sico">📦</div></div><h3 class="kn">ಸಂಗ್ರಹ ಮತ್ತು ವಿತರಣೆ</h3><p class="kn">ಒಪ್ಪಂದವಾದ ನಂತರ ವಿತರಣೆ ಮತ್ತು ಪ್ಯಾಕಿಂಗ್ ವ್ಯವಸ್ಥೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ</p></div>
+      <div class="step-item"><div class="step-num"><div class="num">04</div><div class="sico">💰</div></div><h3 class="kn">ರೈತರಿಗೆ ತಕ್ಷಣ ಹಣ</h3><p class="kn">ಬೆಲೆ ಮತ್ತು ಪಾವತಿ ಸಮಯವನ್ನು ಎರಡೂ ಪಕ್ಷಗಳು ಒಪ್ಪಿಕೊಳ್ಳಬೇಕು</p></div>
     </div>
   </div>
 </section>
@@ -1131,9 +1170,9 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
     </div>
     <div class="serve-grid">
       <div class="serve-card reveal"><span class="emo">👨‍🌾</span><h3 class="kn">ರೈತರು</h3><p class="kn">ಹೊಲದಿಂದ ನೇರ ಮಾರಾಟ. ಮಧ್ಯವರ್ತಿ ಇಲ್ಲ. ತಕ್ಷಣ ಹಣ.</p><span class="pill kn">ಮೌಲ್ಯ ಹೆಚ್ಚಿಸಿ</span></div>
-      <div class="serve-card reveal"><span class="emo">🏨</span><h3 class="kn">ಹೋಟೆಲ್ ಮತ್ತು ರೆಸ್ಟೋರೆಂಟ್</h3><p class="kn">ದಿನಾ ತಾಜಾ ತರಕಾರಿ ಡೆಲಿವರಿ. ಸ್ಪರ್ಧಾತ್ಮಕ ಬೆಲೆ.</p><span class="pill kn">ದಿನಾ ಡೆಲಿವರಿ</span></div>
-      <div class="serve-card reveal"><span class="emo">🍱</span><h3 class="kn">ಟಿಫಿನ್ ಮತ್ತು ಕ್ಯಾಟರಿಂಗ್</h3><p class="kn">ದೊಡ್ಡ ಪ್ರಮಾಣದ ಆರ್ಡರ್‌ಗೆ ವಿಶೇಷ ದರ ಮತ್ತು ಸಮಯ ಡೆಲಿವರಿ.</p><span class="pill kn">ಬಲ್ಕ್ ಆರ್ಡರ್</span></div>
-      <div class="serve-card reveal"><span class="emo">🛒</span><h3 class="kn">ತರಕಾರಿ ಅಂಗಡಿಗಳು</h3><p class="kn">ನಿಯಮಿತ ತಾಜಾ ಸ್ಟಾಕ್. ಕಡಿಮೆ ಬೆಲೆ. ಖಾತ್ರಿ ಗುಣಮಟ್ಟ.</p><span class="pill kn">ತಾಜಾ ಸ್ಟಾಕ್</span></div>
+      <div class="serve-card reveal"><span class="emo">🏨</span><h3 class="kn">ಹೋಟೆಲ್ ಮತ್ತು ರೆಸ್ಟೋರೆಂಟ್</h3><p class="kn">ನಿಮ್ಮ ಅಗತ್ಯದ ಪ್ರಮಾಣ ಮತ್ತು ವಿತರಣೆಯ ಅವಧಿ ಬಗ್ಗೆ ಚರ್ಚಿಸಿ.</p><span class="pill kn">ದಿನಾ ಡೆಲಿವರಿ</span></div>
+      <div class="serve-card reveal"><span class="emo">🍱</span><h3 class="kn">ಟಿಫಿನ್ ಮತ್ತು ಕ್ಯಾಟರಿಂಗ್</h3><p class="kn">ಬಲ್ಕ್ ಆರ್ಡರ್‌ಗಳ ಪ್ರಮಾಣ ಮತ್ತು ವಿತರಣಾ ವಿವರಗಳನ್ನು ಚರ್ಚಿಸಿ.</p><span class="pill kn">ಬಲ್ಕ್ ಆರ್ಡರ್</span></div>
+      <div class="serve-card reveal"><span class="emo">🛒</span><h3 class="kn">ತರಕಾರಿ ಅಂಗಡಿಗಳು</h3><p class="kn">ಲಭ್ಯತೆ, ಗುಣಮಟ್ಟ ಮತ್ತು ಬೆಲೆಗಳನ್ನು ಆರ್ಡರ್‌ಗೆ ಮುಂಚಿತವಾಗಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.</p><span class="pill kn">ತಾಜಾ ಸ್ಟಾಕ್</span></div>
     </div>
   </div>
 </section>
@@ -1148,8 +1187,8 @@ section img:hover{transform:scale(1.045);filter:saturate(1.08)}
     <div class="ben-wrap">
       <div class="ben-box reveal-left">
         <h3 class="kn">👨‍🌾 ರೈತರಿಗೆ ಪ್ರಯೋಜನ</h3>
-        <div class="ben-item"><div class="ben-ico">💰</div><div><h4 class="kn">ಉತ್ತಮ ಬೆಲೆ</h4><p class="kn">ಮಾರುಕಟ್ಟೆಗಿಂತ 30-40% ಹೆಚ್ಚಿನ ಬೆಲೆ</p></div></div>
-        <div class="ben-item"><div class="ben-ico">✅</div><div><h4 class="kn">ಖಾತ್ರಿ ಮಾರಾಟ</h4><p class="kn">ತರಕಾರಿ ವ್ಯರ್ಥ ಆಗದ ಖಾತ್ರಿ</p></div></div>
+        <div class="ben-item"><div class="ben-ico">💰</div><div><h4 class="kn">ಉತ್ತಮ ಬೆಲೆ</h4><p class="kn">ಬೆಲೆ ವಿವರಗಳನ್ನು ನೇರವಾಗಿ ಚರ್ಚಿಸಿ</p></div></div>
+        <div class="ben-item"><div class="ben-ico">✅</div><div><h4 class="kn">ಖಾತ್ರಿ ಮಾರಾಟ</h4><p class="kn">ಲಭ್ಯತೆ ಮತ್ತು ಬೇಡಿಕೆಯನ್ನು ಮುಂಚಿತವಾಗಿ ಹಂಚಿಕೊಳ್ಳಿ</p></div></div>
         <div class="ben-item"><div class="ben-ico">🚗</div><div><h4 class="kn">ಹೊಲಕ್ಕೇ ಸಂಗ್ರಹ</h4><p class="kn">ರೈತರು ಮಾರುಕಟ್ಟೆಗೆ ಹೋಗಬೇಕಿಲ್ಲ</p></div></div>
         <div class="ben-item"><div class="ben-ico">⚡</div><div><h4 class="kn">ತಕ್ಷಣ ಪಾವತಿ</h4><p class="kn">ಅದೇ ದಿನ ಖಾತೆಗೆ ಹಣ</p></div></div>
         <div class="ben-item"><div class="ben-ico">🤝</div><div><h4 class="kn">ದೀರ್ಘಕಾಲೀನ ಒಪ್ಪಂದ</h4><p class="kn">ಸ್ಥಿರ ಮಾರುಕಟ್ಟೆ ಖಾತ್ರಿ</p></div></div>
