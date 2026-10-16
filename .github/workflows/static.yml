@@ -31,7 +31,28 @@ jobs:
           grep -qi '<html' index.html || { echo "::error::index.html does not contain an HTML document."; exit 1; }
           grep -qi '<title>' index.html || { echo "::error::index.html is missing a page title."; exit 1; }
           grep -qi 'name="description"' index.html || { echo "::error::index.html is missing its SEO meta description."; exit 1; }
-          echo "Website entry point and essential SEO metadata found."
+          test -f robots.txt || { echo "::error::robots.txt is missing."; exit 1; }
+          test -f sitemap.xml || { echo "::error::sitemap.xml is missing."; exit 1; }
+          test -f favicon.svg || { echo "::error::favicon.svg is missing."; exit 1; }
+          grep -q 'Sitemap: https://vegz.online/sitemap.xml' robots.txt || { echo "::error::robots.txt does not point to the sitemap."; exit 1; }
+          python3 - <<'PY'
+          import json
+          import re
+          import xml.etree.ElementTree as ET
+
+          html = open("index.html", encoding="utf-8").read()
+          match = re.search(r'<script type="application/ld\\+json">(.*?)</script>', html, re.S)
+          if not match:
+              raise SystemExit("::error::JSON-LD structured data is missing.")
+          json.loads(match.group(1))
+          sitemap = ET.parse("sitemap.xml").getroot()
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [el.text for el in sitemap.findall("sm:url/sm:loc", ns)]
+          if "https://vegz.online/" not in urls:
+              raise SystemExit("::error::The canonical homepage is missing from sitemap.xml.")
+          print("SEO files, JSON-LD, and sitemap XML validated.")
+          PY
+          echo "Website entry point and SEO essentials found."
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
